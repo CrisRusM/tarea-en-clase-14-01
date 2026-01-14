@@ -21,6 +21,7 @@ public class Vehiculo {
     private String matricula;
     private String modelo;
     private int kmActuales;
+    @Enumerated(EnumType.STRING)
     private Estado estado;
 
     @OneToMany(fetch = FetchType.LAZY)

@@ -17,6 +17,10 @@ import java.time.LocalDate;
         name = "Asignacion.vehiculo",
         attributeNodes = @NamedAttributeNode("vehiculo")
 )
+@NamedEntityGraph(
+        name = "Asignacion.conductor",
+        attributeNodes = @NamedAttributeNode("conductor")
+)
 public class Asignacion {
 
     @Id

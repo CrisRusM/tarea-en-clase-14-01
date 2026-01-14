@@ -12,4 +12,7 @@ public interface AsignacionRepository extends JpaRepository<Asignacion, Long> {
 
     @EntityGraph(value = "Asignacion.vehiculo", type = EntityGraph.EntityGraphType.LOAD)
     List<Asignacion>findAllByVehiculo_Id(Long id);
+
+    @EntityGraph(value = "Asignacion.conductor", type = EntityGraph.EntityGraphType.LOAD)
+    List<Asignacion>findAllByConductor_Id(Long id);
 }
